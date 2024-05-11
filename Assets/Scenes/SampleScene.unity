@@ -355,8 +355,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 634a33f6c1e7a4de28aac3ab76101085, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sensX: 400
-  sensY: 400
+  sensX: 600
+  sensY: 600
   orientation: {fileID: 1666685791}
   xRotation: 0
   yRotation: 0
@@ -615,7 +615,7 @@ GameObject:
   - component: {fileID: 1978257888}
   - component: {fileID: 1978257887}
   - component: {fileID: 1978257886}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -783,7 +783,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 300ad73dfc97c41e8a7060e79b7fd3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 3
+  moveSpeed: 7
+  groundDrag: 5
+  jumpForce: 10
+  jumpCooldown: 2
+  airMultiplier: 0.4
+  jumpKey: 32
+  playerHeight: 2
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 1024
   orientation: {fileID: 1666685791}
   horizontalInput: 0
   verticalInput: 0
