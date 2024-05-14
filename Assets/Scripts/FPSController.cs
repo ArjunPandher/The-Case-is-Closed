@@ -2,12 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-/*
 
-    For characters that don't have rigidbodies
-    Manually calculates gravity
-
-*/
 [RequireComponent(typeof(CharacterController))]
 public class FPSController : MonoBehaviour
 {
@@ -53,18 +48,18 @@ public class FPSController : MonoBehaviour
         #region Handles Jumping
         if (Input.GetButton("Jump") && canMove && characterController.isGrounded)
         {
-            Debug.Log("erm1 " + jumpPower);
+            // Debug.Log("erm1 " + jumpPower);
             moveDirection.y = jumpPower;
         }
         else
         {
-            Debug.Log("erm2 " + movementDirectionY);
+            // Debug.Log("erm2 " + movementDirectionY);
             moveDirection.y = movementDirectionY;
         }
 
         if (!characterController.isGrounded)
         {
-            Debug.Log("not grounded");
+            // Debug.Log("not grounded");
             moveDirection.y -= gravity * Time.deltaTime;
         }
         #endregion
@@ -74,7 +69,7 @@ public class FPSController : MonoBehaviour
 
         if (canMove)
         {
-            Debug.Log("can move");
+            // Debug.Log("can move");
             rotationX += -Input.GetAxis("Mouse Y") * lookSpeed;
             rotationX = Mathf.Clamp(rotationX, -lookXLimit, lookXLimit);
             playerCamera.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
